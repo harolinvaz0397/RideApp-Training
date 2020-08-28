@@ -32,7 +32,7 @@ class BookingServiceDetails : AppCompatActivity() {
         val bundle :Bundle ?=intent.extras
         if (bundle!=null){
             val serviceId = bundle.getString("Service Id") // 1
-            Toast.makeText(this, serviceId, Toast.LENGTH_SHORT).show()
+           // Toast.makeText(this, serviceId, Toast.LENGTH_SHORT).show()
             serviceDetailsViewModel.getServiceDetails(this, serviceId!!)
         }
 
@@ -42,6 +42,14 @@ class BookingServiceDetails : AppCompatActivity() {
                     binding.tvServiceStatus.background = ResourcesCompat.getDrawable(this.resources, R.drawable.green_rounded_textview, null)
                     binding.tvMonthAndYear.setTextColor(this.resources.getColor(R.color.green))
                     binding.tvServiceDate.setTextColor(this.resources.getColor(R.color.green))
+
+            }
+            else {
+                binding.tvServiceStatus.text = this.getString(R.string.new_service)
+                binding.tvServiceStatus.background = ResourcesCompat.getDrawable(this.resources, R.drawable.rounded_textview, null)
+                binding.tvMonthAndYear.setTextColor(this.resources.getColor(R.color.orange))
+               binding.tvServiceDate.setTextColor(this.resources.getColor(R.color.orange))
+
 
             }
         })

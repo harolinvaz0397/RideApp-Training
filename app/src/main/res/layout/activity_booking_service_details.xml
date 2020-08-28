@@ -51,13 +51,13 @@
                     android:layout_width="53dp"
                     android:layout_height="27dp"
                     android:layout_marginEnd="0dp"
-                    android:text="@string/new_service"
+                    android:text=""
                     android:layout_gravity="right"
                     android:textAlignment="center"
                     android:padding="4dp"
                     android:textColor="@color/white"
                     android:textSize="12sp"
-                    android:background="@drawable/rounded_textview"
+                    android:background="@color/white"
                     tools:ignore="RtlCompat" />
 
                 <LinearLayout
