@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.finalrideapp.viewmodel.CreateTripViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/destination2"
+                android:layout_width="285dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="63dp"
+                android:hint="@string/where_do_you_want_to_go"
+                android:textColorHint="#4F504F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:text="@={viewmodel.destination}"
+                    android:id="@+id/destinationEditText"
+                    style="@style/fontstyle1"
+                    android:editable="false"
+                    android:longClickable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:completionThreshold="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/source1"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="63dp"
+                android:hint="@string/from"
+                android:textColorHint="#4F504F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/destination2">
+
+                <EditText
+                    android:id="@+id/sourceEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:longClickable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:text="@={viewmodel.source}"
+                    android:textColorHint="#4F504F" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="282dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/shadow"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/source1">
+
+                <TextView
+                    android:id="@+id/currentlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="72dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="top"
+                    android:textColor="#717171"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/currentlocation1"
+                    android:layout_width="160dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/current_location"
+                    android:textColor="#EAB6B6B6"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:src="@drawable/gpsfixedindicator" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="63dp"
+                android:hint="@string/name_of_the_trip"
+                android:textColorHint="#4F504F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearlayout">
+
+                <EditText
+                    android:text="@={viewmodel.name}"
+                    android:id="@+id/tripNameEditText"
+                    style="@style/fontstyle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/startdate1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="218dp"
+                android:hint="@string/start_date"
+                android:paddingBottom="5dp"
+                android:textColorHint="#4F504F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+                <EditText
+                    android:text="@={viewmodel.startDate}"
+                    android:id="@+id/startdateEditText"
+                    style="@style/fontstyle1"
+                    android:longClickable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableEnd="@drawable/calender"
+                    android:gravity="bottom" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/stopdate1"
+                style="@style/fontstyle1"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="63dp"
+                android:hint="@string/end_date"
+                android:paddingBottom="5dp"
+                android:textColorHint="#4F504F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/startdate1"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+                <EditText
+                    android:text="@={viewmodel.endDate}"
+                    android:id="@+id/enddateEditText"
+                    style="@style/fontstyle1"
+                    android:longClickable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/calender"
+                    android:gravity="bottom" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/starttime1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="218dp"
+                android:hint="@string/start_time"
+                app:hintEnabled="true"
+                android:textColorHint="#4F504F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startdate1">
+
+                <EditText
+                    android:text="@={viewmodel.startTime}"
+                    android:id="@+id/startTimeEditText"
+                    style="@style/fontstyle1"
+                    android:longClickable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/clock"
+                    android:gravity="bottom" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/recommendation"
+                android:layout_width="311dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/starttime1">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="25dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Recommendation"
+                    android:textColor="#4F504F"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/relativerecomm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="0dp"
+                        android:background="@drawable/recommendation_background"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/riding_gear"
+                        android:textColor="#EE7F2C"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/textView"
+                        android:background="@drawable/recommendation_background"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="Winter wear"
+                        android:textColor="#EE7F2C"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/textView2"
+                        android:background="@drawable/recommendation_background"
+                        android:gravity="center"
+                        android:text="Drinking water"
+                        android:textColor="#EE7F2C"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/View"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#B4B3B3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/milestone" />
+
+            <LinearLayout
+                android:id="@+id/inviteRidersTextView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommendation"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/userbackground"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="50dp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/inviteRidersTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/fontstyle1"
+                    android:hint="@string/invite_other_riders"
+                    android:textColorHint="#4F504F"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    />
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/fontstyle1"
+                    android:orientation="horizontal" >
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/inviteRidersLinearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            tools:listitem="@layout/riders_cardview"
+                            />
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#B4B3B3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+
+            <TextView
+                android:id="@+id/milestone"
+                style="@style/fontstyle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/milestoneback"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/add_a_milestone"
+                android:onClick="@{viewmodel::onMilestonButtonClick}"
+                android:paddingStart="50dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="#4F504F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+            <Button
+                android:onClick="@{viewmodel::onDoneButtonClick}"
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/donebutton"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/done"
+                android:textColor="#EFEEEE"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="321dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="45dp"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inviteRidersTextView"
+                tools:listitem="@layout/list_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

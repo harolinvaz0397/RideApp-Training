@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.finalrideapp.viewmodel.ServiceDetailsViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.home.BookingServiceDetails">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tbBookingDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/orange"
+                app:title="Booking Details"
+                app:titleTextColor="@color/white"
+                app:navigationIcon="@drawable/ic_action_whiteback"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundbackview"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                android:elevation="13px">
+                <TextView
+                    android:id="@+id/tvServiceStatus"
+                    android:layout_width="53dp"
+                    android:layout_height="27dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="@string/new_service"
+                    android:layout_gravity="right"
+                    android:textAlignment="center"
+                    android:padding="4dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:background="@drawable/rounded_textview"
+                    tools:ignore="RtlCompat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tvServiceDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.serviceDate}"
+                                android:textColor="@color/orange"
+                                android:textSize="44sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="14dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:id="@+id/tvMonthAndYear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.serviceMonthAndYear}"
+                                android:textColor="@color/orange"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/line"
+                        android:background="@color/service_records_card_separator_color"
+                        tools:ignore="InvalidId"
+                        android:layout_marginLeft="21dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="19dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.serviceType}"
+                            android:textColor="@color/gray"
+                            android:id="@+id/service"
+                            android:textSize="12sp" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            android:theme="@style/RatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:stepSize="0.5"
+                            android:rating="2"
+                            android:numStars="5"
+                            android:isIndicator="true"
+                            style = "@style/dealerRatingBar" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="21dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="25dp">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:text="@string/mobile_number"
+                            android:textColor="#4F504F"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:gravity="left" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="51dp"
+                                android:layout_height="28dp"
+                                android:text="@string/separator"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:textAlignment="center"
+                                android:layout_alignParentLeft="true"
+                                android:gravity="center_horizontal" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.riderContactNumber}"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentRight="true"
+                                android:gravity="right"
+                                android:background="@null"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/separator_color"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="7dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:text="@string/vehicle_number"
+                            android:textStyle="bold"
+                            android:textColor="#4F504F"
+                            android:textSize="14sp"
+                            android:gravity="left" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="51dp"
+                                android:layout_height="28dp"
+                                android:text=":"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:gravity="center_horizontal"
+                                android:layout_alignParentLeft="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.vehicleNumber}"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="right"
+                                android:background="@null"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/separator_color"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="7dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:text="@string/service_type"
+                            android:textStyle="bold"
+                            android:textColor="#4F504F"
+                            android:textSize="14sp"
+                            android:gravity="left" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="51dp"
+                                android:layout_height="28dp"
+                                android:text=":"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:gravity="center_horizontal"
+                                android:layout_alignParentLeft="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.serviceType}"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="right"
+                                android:background="@null"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/separator_color"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="7dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:text="@string/time"
+                            android:textStyle="bold"
+                            android:textColor="#4F504F"
+                            android:textSize="14sp"
+                            android:gravity="left" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="51dp"
+                                android:layout_height="28dp"
+                                android:text=":"
+                                android:textColor="#4F504F"
+                                android:gravity="center_horizontal"
+                                android:textSize="14sp"
+                                android:layout_alignParentLeft="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.serviceTime}"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="right"
+                                android:background="@null"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/separator_color"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="7dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="28dp"
+                            android:text="@string/dealer"
+                            android:textStyle="bold"
+                            android:textColor="#4F504F"
+                            android:textSize="14sp"
+                            android:gravity="left" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="51dp"
+                                android:layout_height="28dp"
+                                android:text=":"
+                                android:gravity="center_horizontal"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentLeft="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dp"
+                                android:text="@{viewModel.serviceDealerName}"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="right"
+                                android:background="@null"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/separator_color"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="7dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="25dp"
+                            android:text="@string/city"
+                            android:textStyle="bold"
+                            android:textColor="#4F504F"
+                            android:textSize="14sp"
+                            android:gravity="left" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="51dp"
+                                android:layout_height="25dp"
+                                android:text=":"
+                                android:gravity="center_horizontal"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentLeft="true"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:text="@{viewModel.serviceDealerCity}"
+                                android:textColor="#4F504F"
+                                android:textSize="14sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:gravity="right"
+                                android:background="@null"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/separator_color"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="7dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/comments"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#4F504F"
+                        android:layout_marginTop="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@{viewModel.serviceComments}"
+                        android:layout_marginTop="15dp"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="@string/total_bill_payed"
+                    android:textColor="#5D5E5D"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Rs 4,000/-"
+                    android:textColor="@color/orange"
+                    android:textSize="30sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="@string/rate_the_service"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#5D5E5D"
+                    android:textSize="14sp"/>
+                <RatingBar
+                    android:theme="@style/RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:stepSize="0.5"
+                    android:rating="2"
+                    android:numStars="5"
+                    android:isIndicator="false"
+                    style = "@style/dealerRatingBar" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="69dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

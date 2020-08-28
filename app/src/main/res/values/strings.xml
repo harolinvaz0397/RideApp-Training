@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">RideApp</string>
+    <string name="royalBike">Do you have a Royal Bike</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="avatar">to make it more cool select your avatar</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="reset">Reset</string>
+
+
+    <string name="otp_title">We have sent an OTP to</string>
+    <string name="phoneNumber">+91- 9901906078</string>
+    <string name="resendOTP">Re-send Again</string>
+    <string name="booking_confirmed">Your booking has been confirmed</string>
+    <string name="done">DONE</string>
+    <string name="separator">:</string>
+    <string name="home_button">CREATE A TRIP</string>
+    <string name="home_text">Welcome Aboard</string>
+    <string name="home_subtext">You do not have any trips at this moment</string>
+    <string name="trips">Trips</string>
+    <string name="my_garage">My Garage</string>
+    <string name="my_activities">My Activities</string>
+    <string name="profile">My Profile</string>
+    <string name="more">More</string>
+    <string name="nextServiceDue">"\n"Next Service Due</string>
+    <string-array name="service_types_array">
+        <item>Service Type</item>
+        <item>Free service</item>
+        <item>General service</item>
+        <item>Breakdown assistance</item>
+    </string-array>
+    <string name="findDealerButton">Find A Dealer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="check_slot">CHECK SLOT</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="book">BOOK</string>
+    <string name="comments">Comments</string>
+    <string name="edit">Edit</string>
+    <string name="enter_valid_number">Enter a valid 10 digit number</string>
+    <string name="book_a_service">Book a Service</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="vehicle_type">Vehicle Type</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="kmSuffix">km</string>
+
+
+    <string name="invite_other_riders">Invite other riders</string>
+    <string name="start_time">Start time</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="name_of_the_trip">Name of the trip</string>
+    <string name="where_do_you_want_to_go">Where do you want to go?</string>
+    <string name="from">From</string>
+    <string name="add_a_milestone">Add a milestone</string>
+    <string name="current_location">Current location</string>
+    <string name="riding_gear">Riding Gear</string>
+    <string name="this_is_to_make_a_break_journey_in_between_your_trip">This is to make a break journey in between your trip</string>
+    <string name="MAPBOX_ACCESS_TOKEN">pk.eyJ1IjoiYXNod2luZGV2YWRpZ2EiLCJhIjoiY2tjMjZjMXdyMjBxbzJwdGJyM2VoMnhxdCJ9.CnkFB8AG-kbzqoE0bB63-w</string>
+    <string name="if_your_royal_enfield_motorcycle_breaks_down_due_to_a_minor_mechanical_or_electrical_fault_and_an_immediate_repair_on_the_spot_is_deemed_possible_royal_enfield_shall_assist_the_user_by_arranging_for_a_technician_to_reach_the_breakdown_location_royal_enfield_will_bear_the_labour_and_conveyance_costs_however_the_cost_of_material_and_spare_parts_if_required_to_repair_the_motorcycle_on_the_spot_and_any_other_incidental_conveyance_to_obtain_such_material_and_spare_parts_will_have_to_be_borne_by_the_user_this_service_will_be_provided_when_the_motorcycle_is_not_in_a_position_to_be_ridden_to_the_nearest_service_centre_unlimited_km">If your Royal Enfield motorcycle breaks down due to a minor mechanical or electrical fault and an immediate repair on the spot is deemed possible, Royal Enfield shall assist the user by arranging for a technician to reach the breakdown location. Royal Enfield will bear the labour and conveyance costs. However, the cost of material and spare parts, if required, to repair the motorcycle on the spot and any other incidental conveyance to obtain such material and spare parts, will have to be borne by the user. This service will be provided when the motorcycle is not in a position to be ridden to the nearest Service Centre (Unlimited KM).</string>
+    <string name="log_out">Log out</string>
+    <string name="confirm_logout">Are you sure you want to log out?</string>
+    <string name="nov_2017">Nov 2017</string>
+    <string name="_15">15</string>
+    <string name="_809917301">809917301</string>
+    <string name="service_type">Service Type</string>
+    <string name="time">Time</string>
+    <string name="dealer">Dealer</string>
+    <string name="city">City</string>
+    <string name="rate_the_service">Rate the service</string>
+    <string name="total_bill_payed">Total bill payed</string>
+    <string name="days">Days</string>
+    <string name="please_enter_vehicle_number">Please enter vehicle number</string>
+    <string name="please_enter_vehicle_type">Please enter vehicle type</string>
+    <string name="hey">Hey</string>
+    <string name="exclamation">!!</string>
+    <string name="no_upcoming_services">No Upcoming Services</string>
+    <string name="past">Past</string>
+    <string name="new_service">New</string>
+    <string name="what_do_you_want">What do you want?</string>
+    <string name="joined_trip">You have joined a trip</string>
+
+    //temporary data for trip views
+    <string-array name="trip_names">
+        <item>Reunion Manali</item>
+        <item>Scramble Goa</item>
+        <item>Unroad Nasik</item>
+
+    </string-array>
+    <string-array name="trip_date">
+        <item>9-15 October</item>
+        <item>12-15 November</item>
+        <item>1-10 August</item>
+
+    </string-array>
+    <string-array name="trip_status">
+        <item>Upcoming</item>
+        <item>Upcoming</item>
+        <item>Completed</item>
+
+    </string-array>
+
+</resources>

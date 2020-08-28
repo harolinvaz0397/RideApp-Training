@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="57dp"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:id="@+id/rider1"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:src="@drawable/rider1"/>
+
+    <ImageView
+        android:id="@+id/rider2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close1"
+        android:paddingRight="11dp"
+        android:layout_gravity="end"
+         />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="registerViewModel"
+            type="com.example.finalrideapp.viewmodel.RegisterViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.auth.Register">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/registerToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F99C56"
+            app:titleTextColor="#FFFFFF"
+            app:navigationIcon="@drawable/ic_action_whiteback"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerToolbar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegisterName"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user2"
+                android:drawablePadding="10dp"
+                android:hint="Name"
+                android:paddingBottom="11dp"
+                android:textColor="#4F504F"
+                android:textSize="16dp"
+                android:textStyle="normal"
+                android:text="@={registerViewModel.name}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegisterPhone"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/phone_call2"
+                android:drawablePadding="10dp"
+                android:hint="Registerted mobile number"
+                android:paddingBottom="11dp"
+                android:textColor="#4F504F"
+                android:textSize="16dp"
+                android:textStyle="normal"
+                android:text="@={registerViewModel.phone}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegisterEmail"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email2"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:paddingBottom="11dp"
+                android:textColor="#4F504F"
+                android:textSize="16dp"
+                android:textStyle="normal"
+                android:text="@={registerViewModel.email}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegisterPassword"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/locked"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingBottom="11dp"
+                android:textColor="#4F504F"
+                android:textSize="16dp"
+                android:textStyle="normal"
+                android:text="@={registerViewModel.pass}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="282dp"
+                android:layout_height="42dp"
+                android:background="@drawable/round_button"
+                android:text="REGISTER"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:onClick="@{()->registerViewModel.registerOnClick()}"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+<!--
+android:onClick="@{()->registerViewModel.registerOnClick()}"
+-->

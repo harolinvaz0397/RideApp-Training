@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.finalrideapp.viewmodel.DealerProfileViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.activities.DealerProfileActivity">
+
+            <ImageView
+                android:id="@+id/ivDealerProfilePicture"
+                android:layout_width="match_parent"
+                android:layout_height="217dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/dealer_profile"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivDealerProfilePicture"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/dealerRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:rating="@{viewmodel.dealerRating}"
+                        android:stepSize="0.5"
+                        android:numStars="5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivDealerProfilePicture"
+                        />
+                    <TextView
+                        android:id="@+id/tvDealerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="42dp"
+                        android:textSize="20sp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dealersListTitleColor"
+                        android:letterSpacing="0"
+
+                        android:text="@{viewmodel.dealerName}"
+                        />
+                    <TextView
+                        android:id="@+id/tvDealerAddress"
+                        android:layout_width="214dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="42dp"
+                        android:layout_marginTop="2dp"
+                        android:textSize="14sp"
+                        android:letterSpacing="0"
+                        android:textColor="@color/dealerListTextColor"
+                        android:text="@{viewmodel.dealerAddress}"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDealerInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="42dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/dealerListTextColor"
+                        android:letterSpacing="0"
+                        android:text="@{viewmodel.dealerInfo}"
+                        />
+                    <TextView
+                        android:id="@+id/tvDealerContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="42dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/dealerListTextColor"
+                        android:letterSpacing="0"
+                        android:text="@{viewmodel.dealerContact}"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvKilometers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="57px"
+                    android:layout_marginEnd="18dp"
+                    android:text="@{viewmodel.distance}"
+                    android:textColor="@color/dealerListTextColor"
+                    android:textSize="12sp" />
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonCheckSlot"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/button_states_bg"
+                android:text="@string/check_slot"
+                android:enabled="false"
+                android:textColor="@color/button_text_color"
+                />
+            <Space
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toBottomOf="@id/buttonCheckSlot"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

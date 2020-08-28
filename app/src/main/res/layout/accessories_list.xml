@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/accessories_item_border">
+
+
+
+        <RelativeLayout
+            android:layout_marginStart="10dp"
+            android:layout_width="188dp"
+            android:layout_height="234dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="17dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tview"
+                    android:text="Text Date"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="16dp"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left" />
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="17dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/thumb"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="17dp"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iview"
+                android:layout_width="122dp"
+                android:layout_height="115dp"
+                android:layout_centerInParent="true"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bmap1" />
+
+            <TextView
+                android:id="@+id/itview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Text Name"
+                android:layout_alignParentStart="true"
+                android:textColor="#664700"
+                android:background="#ffffff"
+                android:textSize="14sp"
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:id="@+id/itview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text Price"
+                android:textColor="#ED802E"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+
+
+        </RelativeLayout>
+
+
+</LinearLayout>

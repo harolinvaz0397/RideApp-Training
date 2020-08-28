@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home.ToolKitPopUp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical">
+
+
+        <ImageButton
+            android:id="@+id/imgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Onsite Minor Repairs"
+            android:textColor="#000700"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/if_your_royal_enfield_motorcycle_breaks_down_due_to_a_minor_mechanical_or_electrical_fault_and_an_immediate_repair_on_the_spot_is_deemed_possible_royal_enfield_shall_assist_the_user_by_arranging_for_a_technician_to_reach_the_breakdown_location_royal_enfield_will_bear_the_labour_and_conveyance_costs_however_the_cost_of_material_and_spare_parts_if_required_to_repair_the_motorcycle_on_the_spot_and_any_other_incidental_conveyance_to_obtain_such_material_and_spare_parts_will_have_to_be_borne_by_the_user_this_service_will_be_provided_when_the_motorcycle_is_not_in_a_position_to_be_ridden_to_the_nearest_service_centre_unlimited_km" />
+    </LinearLayout>
+
+</LinearLayout>

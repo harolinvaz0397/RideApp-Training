@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.finalrideapp.viewmodel.MyGarageViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".fragment.MyGarageFragment">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDaysRemaining"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="122dp"
+                android:layout_marginEnd="121dp"
+                android:textAlignment="center"
+                android:text="@{viewModel.daysDue}"
+                android:textSize="17sp"
+                android:textColor="@color/no_of_days_next_service_due"
+                android:textStyle="bold"
+                />
+            <!-- Later bind it with variable in viewmodel to fetch remaining days-->
+        <!--    <TextView
+                android:id="@+id/tvServiceDue"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvDaysRemaining"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="122dp"
+                android:layout_marginEnd="121dp"
+                android:text="@{viewModel.nextServiceCaption}"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textColor="@color/no_of_days_next_service_due"
+                android:textStyle="bold"
+
+                />-->
+
+            <ImageView
+                android:id="@+id/ivPage"
+                android:layout_width="320dp"
+                android:layout_height="170dp"
+                app:layout_constraintTop_toBottomOf="@id/tvDaysRemaining"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/page"
+                android:layout_marginTop="34dp"/>
+
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:divider="@color/dividerColor"
+                android:dividerHeight="3px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivPage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+</layout>

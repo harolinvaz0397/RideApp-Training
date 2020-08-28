@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.finalrideapp.viewmodel.BookServiceViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        tools:context=".view.home.BookServiceActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbBookService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/orange"
+            app:title="@string/book_a_service"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            app:titleTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tbBookService">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="281dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="43dp"
+                    android:layout_marginEnd="39dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout1"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="281dp"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/ErrorText"
+                        app:hintAnimationEnabled="false"
+                        app:hintTextAppearance="@style/HintText">
+
+
+                        <EditText
+                            android:id="@+id/editTextMobile"
+                            android:layout_width="281dp"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:digits="0123456789"
+                            android:drawableRight="@drawable/ic_create_black_24dp"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="@string/mobile_number"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="@={viewModel.mobileNumber}"
+                            android:textColorHighlight="#B4B3B3" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/buttonEdit"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent"
+                        android:onClick="@{(v)->viewModel.onEditButtonClicked(v)}"
+                        android:stateListAnimator="@null"
+                        android:text=" " />
+
+                </FrameLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout2"
+                    style="@style/TextInputLayoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="39dp"
+                    app:errorTextAppearance="@style/ErrorText"
+                    app:hintTextAppearance="@style/HintText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+                    <EditText
+                        android:id="@+id/editTextVehicleType"
+                        android:layout_width="281dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="true"
+                        android:hint="@string/vehicle_type"
+                        android:text="@={viewModel.vehicleType}"
+                        app:onFocus="@{viewModel.focusChangeListener}" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--android:focusableInTouchMode="false"
+                                     android:focusable="false"8-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout3"
+                    style="@style/TextInputLayoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="39dp"
+                    app:errorTextAppearance="@style/ErrorText"
+                    app:hintTextAppearance="@style/HintText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+                    <EditText
+                        android:id="@+id/editTextVehicleNumber"
+                        android:layout_width="281dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="true"
+                        android:hint="@string/vehicle_number"
+                        android:text="@={viewModel.vehicleNumber}"
+                        app:onFocus="@{viewModel.focusChangeListener}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- <Spinner
+                           android:id="@+id/spinnerServiceType"
+                           android:layout_width="281dp"
+                           android:layout_height="wrap_content"
+                           app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintEnd_toEndOf="parent"
+                           android:layout_marginTop="41dp"
+                           android:layout_marginStart="39dp"
+                           android:layout_marginEnd="39dp"
+                           android:dropDownWidth="281dp"
+                           style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+
+                           />-->
+                <TextView
+                    android:id="@+id/spinnerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="243dp"
+                    android:text="@={viewModel.spinnerTitle}"
+                    android:textColor="#9F9F9F"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textInputLayout3" />
+
+                <Spinner
+                    android:id="@+id/spinnerServiceType"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="280dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="39dp"
+                    android:dropDownWidth="281dp"
+                    android:gravity="start|bottom"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+                    tools:setOnItemSelectedListener="@{viewModel.clicksListener}" />
+
+                <TextView
+                    android:id="@+id/tvComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="240dp"
+                    android:text="@string/comments"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerServiceType" />
+
+                <EditText
+                    android:id="@+id/editTextComments"
+                    android:layout_width="281dp"
+                    android:layout_height="71dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="39dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:padding="5dp"
+                    android:text="@={viewModel.comments}"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerServiceType" />
+
+                <Button
+                    android:id="@+id/buttonFindDealer"
+                    android:layout_width="282dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/button_states_bg"
+                    android:enabled="false"
+                    android:onClick="@{(v)->viewModel.onFindDealersButtonClicked(v)}"
+                    android:text="@string/findDealerButton"
+                    android:textColor="@color/button_text_color"
+                    android:textSize="14dp"
+
+                    app:layout_constraintBottom_toTopOf="@+id/space"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/editTextComments" />
+
+                <Space
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/buttonFindDealer" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

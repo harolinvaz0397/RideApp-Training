@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_trips_fragment"
+        android:icon="@drawable/bike"
+        android:title="@string/trips"
+
+        />
+
+    <item android:id="@+id/nav_my_garage_fragment"
+        android:icon="@drawable/wrench"
+        android:title="@string/my_garage"
+        />
+
+    <item android:id="@+id/nav_my_activities_fragment"
+        android:icon="@drawable/list"
+        android:title="@string/my_activities"
+
+        />
+
+    <item android:id="@+id/nav_my_profile_fragment"
+        android:icon="@drawable/user"
+        android:title="@string/profile"
+        />
+
+    <item android:id="@+id/nav_more_fragment"
+        android:icon="@drawable/more"
+        android:title="@string/more"
+        />
+
+</menu>

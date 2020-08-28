@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="seekbarThumbOrange">#ED7E2B</color>
+    -->
+    <color name="colorPrimary">#F99C56</color>
+    <color name="colorPrimaryDark">#090909</color>
+    <color name="colorAccent">#4F504F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="underline">#ED7F2C</color>
+    <color name="orange">#F99C56</color>
+    <color name="gray">#B4B3B3</color>
+    <color name="blue">#03DAC5</color>
+    <color name="seekbarThumbOrange">#ED7E2B</color>
+    <color name="grey">#340B0808</color>
+    <color name="gray1">#6F6D6D</color>
+    <color name="yellow">#F3DA3B</color>
+
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="item_text_color">#FFFFFF</color>
+    <color name="item_icon_color">#FFFFFF</color>
+    <color name="home_text_color">#4F504F</color>
+    <color name="start_color">#ED7E2B</color>
+    <color name="end_color">#F4A264</color>
+    <color name="dividerColor">#47979797</color>
+    <color name="myGarageFragmentText">#515251</color>
+    <color name="dropDownArrow">#000000</color>
+    <color name="floatingLabel">#9F9F9F</color>
+    <color name="dropDownBase">#B4B3B3</color>
+    <color name="cursorColor">#B4B3B3</color>
+    <color name="cardViewTitleColor">#717171</color>
+    <color name="cardViewSubTitle">#717171</color>
+    <color name="cardViewBackground">#FFFFFF</color>
+    <color name="dealersListTitleColor">#EE8130</color>
+    <color name="dealerListTextColor">#6F6D6D</color>
+    <color name="upArrow">#ED7E2B</color>
+    <color name="upArrowBlack">#515251</color>
+    <color name="date_picker_accent">#F2944E</color>
+    <color name="separator_color">#54B4B3B3</color>
+    <color name="separator_color1">#99B4B3B3</color>
+
+    <color name="star_activated_state">#F3DA3B</color>
+    <color name="no_of_days_next_service_due">#E08B4D</color>
+    <color name="booking_details_text_color">#4F504F</color>
+    <color name="service_records_card_separator_color">#26979797</color>
+    <color name="green">#1CB391</color>
+
+</resources>

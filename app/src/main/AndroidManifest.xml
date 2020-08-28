@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.finalrideapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_rideapp"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".view.home.JoinTripSuccessActivity"></activity>
+        <activity android:name=".view.home.JoinTripActivity" />
+        <activity android:name=".view.home.InvoiceDetailsActivity" />
+        <activity
+            android:name=".view.home.ToolKitPopUp"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity android:name=".view.home.ToolKit" />
+        <activity
+            android:name=".view.auth.OtpVerify"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.BookingServiceDetails"
+            android:parentActivityName=".view.home.ServiceRecords"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.ServiceRecords"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.Accessories"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.OwnerManualPage1"
+            android:parentActivityName=".view.home.HomeActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.OwnerManualPage2"
+            android:parentActivityName=".view.home.OwnerManualPage1"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.OwnerManualPage3"
+            android:parentActivityName=".view.home.OwnerManualPage2"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.SuccessScreenActivity"
+            android:label=""
+            android:parentActivityName=".view.home.BookingDetailsActivity"
+            android:theme="@style/DarkAppTheme" />
+        <activity
+            android:name=".view.home.BookingDetailsActivity"
+            android:parentActivityName=".view.home.DealerProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.DealerProfileActivity"
+            android:parentActivityName=".view.home.FindDealersActivity"
+            android:theme="@style/DarkAppTheme" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAXCqq2LH_tYypX5602r9JFrK1c4gvBsbE" />
+
+        <activity
+            android:name=".view.home.FindDealersActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.home.BookServiceActivity"
+            android:parentActivityName=".view.home.HomeActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.home.CreateTripActivity"
+            android:parentActivityName=".view.home.HomeActivity"
+            android:theme="@style/DarkAppTheme" />
+        <activity
+            android:name=".view.home.HomeActivity"
+            android:theme="@style/DarkAppTheme" />
+        <activity
+            android:name=".view.auth.RegisterProfileSuccess"
+            android:parentActivityName=".view.auth.RegisterProfile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.auth.RegisterProfile" />
+        </activity>
+        <activity
+            android:name=".view.auth.RegisterProfile"
+            android:parentActivityName=".view.auth.Register">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.auth.Register" />
+        </activity>
+        <activity
+            android:name=".view.auth.ResetPasswordSuccess"
+            android:parentActivityName=".view.auth.ResetPassword">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.auth.ResetPassword" />
+        </activity>
+        <activity
+            android:name=".view.auth.ResetPassword"
+            android:parentActivityName=".view.auth.Login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.auth.Login" />
+        </activity>
+        <activity
+            android:name=".view.auth.Register"
+            android:parentActivityName=".view.auth.Login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.auth.Login" />
+        </activity>
+        <activity
+            android:name=".view.home.TripSuccessActivity"
+            android:theme="@style/DarkAppTheme" />
+        <activity
+            android:name=".view.home.TripSummaryActivity"
+            android:theme="@style/DarkAppTheme" />
+        <activity
+            android:name=".view.home.ContactsActivity"
+            android:parentActivityName=".view.home.CreateTripActivity"
+            android:theme="@style/DarkAppTheme" />
+        <activity android:name=".view.auth.Login" />
+        <activity android:name=".view.splash.AppTourCopy" />
+        <activity android:name=".view.splash.AppTourActivity" />
+        <activity android:name=".view.splash.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

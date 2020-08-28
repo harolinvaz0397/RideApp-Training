@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_trips_fragment">
+
+
+    <fragment
+        android:id="@+id/nav_trips_fragment"
+        android:name="com.example.finalrideapp.fragment.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_garage_fragment"
+        android:name="com.example.finalrideapp.fragment.MyGarageFragment"
+        android:label="fragment_my_garage"
+        tools:layout="@layout/fragment_my_garage" >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_profile_fragment"
+        android:name="com.example.finalrideapp.fragment.MyprofileFragment"
+        android:label="fragment_myprofile"
+        tools:layout="@layout/myprofile_fragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_more_fragment"
+        android:name="com.example.finalrideapp.fragment.MoreOptionsFragment"
+        android:label="fragment_more_options"
+        tools:layout="@layout/fragment_more_options" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_activities_fragment"
+        android:name="com.example.finalrideapp.fragment.ViewTripsFragment"
+        android:label="myactivities"
+        tools:layout="@layout/fragment_view_trips"
+    >
+    </fragment>
+
+</navigation>
